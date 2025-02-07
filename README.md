@@ -1,0 +1,3 @@
+# Unexpected Behavior with Mutable Variables in F#
+
+This example demonstrates a potential source of confusion when working with mutable variables in F#.  The initial values of `x` and `y` are used in the `add` function. However, modifying these variables *after* the function call does not change the result of the function call, unless the function itself modifies those variables. This is because the values of `x` and `y` are copied to the `add` function when it is called, not references to them.
